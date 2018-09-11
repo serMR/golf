@@ -6,22 +6,12 @@ public class Secuencia {
 	
 	static boolean secuenciaCiclica(int[] s) {
 		
-		int i=0, j=0, a, n=s.length;
-		int cont=0;
-		
-		
-//		for(; j<n; j++) 
-//			i = s[j]<s[i]?j:i;
-		
-		for(j=0; j<n-1;) {
-			cont += s[j]>s[++j]?1:0;
-//			a=i+j++;
-//			if(s[a%n] > s[++a%n])
-//				return 0>1;
-		}
-//		return i<1 && n>1? 0>1: 1>0;
-		
-		return cont==1?true:false;
+		int i=0, c=0, n=s.length;
+				
+		for(; i<n-1;)
+			c += s[i]>s[++i]?1:0;
+
+		return c==1 && s[n-1]<s[0] || n<2?1>0:0>1;
 		
 	}
 }
