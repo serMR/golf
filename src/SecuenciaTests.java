@@ -27,7 +27,7 @@ public class SecuenciaTests {
 		secuencia[0]=1;
 		secuencia[1]=3;
 		secuencia[2]=2;
-		
+		// no es incremental
 		assertTrue(Secuencia.secuenciaCiclica(secuencia));
 	}
 	
@@ -41,7 +41,7 @@ public class SecuenciaTests {
 		secuencia[2]=10;
 		secuencia[3]=-2;
 		secuencia[4]=0;
-		
+		// true
 		assertTrue(Secuencia.secuenciaCiclica(secuencia));
 		
 	}
@@ -54,7 +54,7 @@ public class SecuenciaTests {
 		secuencia[0]=-2;
 		secuencia[1]=0;
 		secuencia[2]=-1;
-		
+		//false no es incremental 
 		assertTrue(Secuencia.secuenciaCiclica(secuencia));
 		
 	}
@@ -65,7 +65,7 @@ public class SecuenciaTests {
 		int[] secuencia = new int[1];
 		
 		secuencia[0]=1;
-		
+		// true
 		assertTrue(Secuencia.secuenciaCiclica(secuencia));
 		
 	}
@@ -81,7 +81,19 @@ public class SecuenciaTests {
 		secuencia[2]=3;
 		secuencia[3]=4;
 		secuencia[4]=5;
+		//false incremental pero no ciclico
+		assertTrue(Secuencia.secuenciaCiclica(secuencia));
 		
+	}
+	
+	@Test
+	public void ejemplo5() {
+
+		int[] secuencia = new int[2];
+		
+		secuencia[0]=1;
+		secuencia[1]=1;
+		//false
 		assertTrue(Secuencia.secuenciaCiclica(secuencia));
 		
 	}
